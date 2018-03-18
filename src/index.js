@@ -1,22 +1,9 @@
 import { h, app } from 'hyperapp';
 import { actions } from './actions'
+import TodoItem from './todo-item'
 import './index.scss';
 
 const FilterInfo = { All: 0, Todo: 1, Done: 2 }
-
-const TodoItem = ({ id, value, done, toggle }) => (
-  <li
-    class={done && "done"}
-    onclick={e =>
-      toggle({
-        value: done,
-        id: id
-      })
-    }
-  >
-    {value}
-  </li>
-);
 
 const state = {
   todos: [],
