@@ -9,7 +9,8 @@
     "hyperapp": "^1.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.39", "@babel/plugin-transform-react-jsx": "^7.0.0-beta.39",
+    "@babel/core": "^7.0.0-beta.39",
+    "@babel/plugin-transform-react-jsx": "^7.0.0-beta.39",
     "@babel/register": "^7.0.0-beta.39",
     "babel-loader": "^8.0.0-beta.0",
     "css-loader": "^0.28.11",
