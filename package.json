@@ -1,0 +1,27 @@
+{
+  "name": "hyperapp-cypress",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "author": "Alex Barry",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "hyperapp": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.39", "@babel/plugin-transform-react-jsx": "^7.0.0-beta.39",
+    "@babel/register": "^7.0.0-beta.39",
+    "babel-loader": "^8.0.0-beta.0",
+    "css-loader": "^0.28.11",
+    "cypress": "^2.1.0",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --config ./webpack.config.js",
+    "test": "cypress open"
+  }
+}
