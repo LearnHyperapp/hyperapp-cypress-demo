@@ -30,3 +30,37 @@ This needs to be running for Cypress to use it.
 This will open a window so you can control which spec files are being ran.
 When you run a spec file test, it will load a new _controlled_ instance of Chrome.
 From there, you will have an interface to see the results from tests, as well as an iframe of your app.
+
+## Tests
+
+To run tests in the interactive mode, start the server and then open Cypress
+
+```
+npm start &
+npm test
+```
+
+To run tests on CI we need to start the server, run the tests and then close everything. This can be done using [start-server-and-test](https://github.com/bahmutov/start-server-and-test) utility.
+
+```
+npm run ci
+```
+
+### end to end tests
+
+These tests assume the server is running and the page `locahost:8080` has the application page
+
+- [cypress/integration/data_spec.js](cypress/integration/data_spec.js)
+- [cypress/integration/list_spec.js](cypress/integration/list_spec.js)
+
+### integration tests
+
+These tests exercise individual view functions like `TodoItem` by mounting it as a "mini web app" and then using Cypress to interact with them
+
+- [cypress/integrations/todo_item_spec.js](cypress/integrations/todo_item_spec.js)
+
+### unit tests
+
+These tests do not require DOM, but Cypress can run them anyway
+
+- [cypress/integrations/actions_spec.js](cypress/integrations/actions_spec.js)

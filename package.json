@@ -19,12 +19,15 @@
     "cypress-hyperapp-unit-test": "0.0.0-development",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.7",
+    "start-server-and-test": "1.1.0",
     "style-loader": "^0.20.3",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.4"
   },
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --config ./webpack.config.js",
-    "test": "cypress open"
+    "test": "cypress open",
+    "cy:run": "cypress run",
+    "ci": "start-server-and-test start http://localhost:8080 cy:run"
   }
 }
