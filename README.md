@@ -57,10 +57,10 @@ These tests assume the server is running and the page `locahost:8080` has the ap
 
 These tests exercise individual view functions like `TodoItem` by mounting it as a "mini web app" and then using Cypress to interact with them
 
-- [cypress/integrations/todo_item_spec.js](cypress/integrations/todo_item_spec.js)
+- [cypress/integration/todo_item_spec.js](cypress/integration/todo_item_spec.js)
 
 ### unit tests
 
 These tests do not require DOM, but Cypress can run them anyway
 
-- [cypress/integrations/actions_spec.js](cypress/integrations/actions_spec.js)
+- [cypress/integration/actions_spec.js](cypress/integration/actions_spec.js)
