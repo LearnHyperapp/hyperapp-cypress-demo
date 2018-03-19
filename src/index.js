@@ -1,21 +1,9 @@
 import { h, app } from 'hyperapp';
+import { actions } from './actions'
+import TodoItem from './todo-item'
 import './index.scss';
 
 const FilterInfo = { All: 0, Todo: 1, Done: 2 }
-
-const TodoItem = ({ id, value, done, toggle }) => (
-  <li
-    class={done && "done"}
-    onclick={e =>
-      toggle({
-        value: done,
-        id: id
-      })
-    }
-  >
-    {value}
-  </li>
-);
 
 const state = {
   todos: [],
@@ -82,28 +70,5 @@ const view = (state, actions) => (
     </p>
   </div>
 );
-
-const actions = {
-  add: () => state => {
-    if (state.input === '') return;
-
-    return {
-      input: "",
-      todos: state.todos.concat({
-        done: false,
-        value: state.input,
-        id: state.todos.length + 1,
-      }),
-    };
-  },
-
-  toggle: ({ id, value }) => state => ({
-    todos: state.todos.map(
-      t => (id === t.id ? Object.assign({}, t, { done: !value }) : t)
-    )
-  }),
-  input: ({ value }) => ({ input: value }),
-  filter: ({ value }) => ({ filter: value }),
-};
 
 window.hyperappInterop = app(state, actions, view, document.body);
