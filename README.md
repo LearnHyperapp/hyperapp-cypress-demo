@@ -33,14 +33,15 @@ From there, you will have an interface to see the results from tests, as well as
 
 ## Tests
 
-To run tests in the interactive mode, start the server and then open Cypress
+Tests are using [start-server-and-test](https://github.com/bahmutov/start-server-and-test) utility to start webpack dev server, run Cypress then shutdown the server.
+
+To run tests in the interactive mode a single command starts the server and opens Cypress GUI
 
 ```
-npm start &
 npm test
 ```
 
-To run tests on CI we need to start the server, run the tests and then close everything. This can be done using [start-server-and-test](https://github.com/bahmutov/start-server-and-test) utility.
+To run tests on CI in non-interactive mode use the following command.
 
 ```
 npm run ci

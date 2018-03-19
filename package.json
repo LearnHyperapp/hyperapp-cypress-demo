@@ -26,8 +26,9 @@
   },
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --config ./webpack.config.js",
-    "test": "cypress open",
+    "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "ci": "start-server-and-test start http://localhost:8080 cy:run"
+    "ci": "start-server-and-test start http://localhost:8080 cy:run",
+    "test": "start-server-and-test start http://localhost:8080 cy:open"
   }
 }
