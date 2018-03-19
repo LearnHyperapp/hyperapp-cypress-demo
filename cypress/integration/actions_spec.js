@@ -8,7 +8,7 @@ describe('actions', () => {
         todos: []
       }
       const result = actions.add()(state)
-      cy.wrap(result).should('deep.equal', {
+      expect(result).to.deep.equal({
         input: '',
         todos: [{
           done: false,
